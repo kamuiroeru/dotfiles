@@ -78,5 +78,4 @@ nnoremap TJ :split<CR> :exe("tjump ".expand('<cword>'))<CR>
 
 nnoremap Y "+y
 nnoremap YY "+yy
-nnoremap ; :
 nnoremap : ;

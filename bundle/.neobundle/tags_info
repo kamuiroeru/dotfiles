@@ -1,0 +1,14 @@
+bufferlist.vim
+jellybeans.vim
+lightline.vim
+neobundle.vim
+nerdtree
+seiya.vim
+syntastic
+tcomment_vim
+vim-autoclose
+vim-bracketed-paste
+vim-fugitive
+vim-indent-guides
+vim-submode
+vim-trailing-whitespace

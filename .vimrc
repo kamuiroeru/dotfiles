@@ -7,3 +7,4 @@ source ~/.vim/edit.vimrc
 source ~/.vim/file.vimrc
 
 filetype indent plugin on
+set backupskip=/tmp/*,/private/tmp/*
