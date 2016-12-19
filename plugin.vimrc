@@ -67,6 +67,3 @@ let g:indent_guides_guide_size = 1
 
 " source ~/.vim/plugin.complete.vimrc
 
-"syntastic
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=2
