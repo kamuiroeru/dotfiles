@@ -34,6 +34,7 @@ NeoBundle 'kana/vim-submode'
 
 " Syntax
 NeoBundle 'scrooloose/syntastic'
+let g:loaded_syntastic_python_pylint_checker = 0
 " NeoBundle 'othree/html5.vim'
 " NeoBundle 'hail2u/vim-css3-syntax'
 " NeoBundle 'jelera/vim-javascript-syntax'
@@ -48,7 +49,16 @@ if has('lua')
 else
     " NeoBundle 'Shougo/neocomplcache.vim'
 endif
+
+NeoBundle 'davidhalter/jedi-vim'
+" NeoBundleLazy 'lambdalisue/vim-pyenv', {
+"         \ 'depends': ['davidhalter/jedi-vim'],
+"         \ 'autoload': {
+"         \   'filetypes': ['python', 'python3'],
+"         \ }}
+NeoBundle 'ervandew/supertab'
 call neobundle#end()
+
 
 NeoBundleCheck
 
@@ -70,3 +80,24 @@ let g:indent_guides_guide_size = 1
 "syntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
+
+
+" PATHの自動更新関数
+" | 指定された path が $PATH に存在せず、ディレクトリとして存在している場合
+" | のみ $PATH に加える
+function! IncludePath(path)
+  " define delimiter depends on platform
+  if has('win16') || has('win32') || has('win64')
+    let delimiter = ";"
+  else
+    let delimiter = ":"
+  endif
+  let pathlist = split($PATH, delimiter)
+  if isdirectory(a:path) && index(pathlist, a:path) == -1
+    let $PATH=a:path.delimiter.$PATH
+  endif
+endfunction
+
+" ~/.pyenv/shims を $PATH に追加する
+" これを行わないとpythonが正しく検索されない
+call IncludePath(expand("~/.pyenv/shims"))

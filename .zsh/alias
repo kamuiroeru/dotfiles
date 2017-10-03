@@ -14,8 +14,6 @@ alias apdate='sudo apt-get update'
 alias aprem='sudo apt-get remove'
 alias aptsync='apdate && apgrade -y && sudo apt-get autoremove && sudo apt-get autoclean'
 
-alias open=xdg-open
-
 alias su='sudo su -l -p'
 
 alias la='ls -a'
@@ -53,11 +51,56 @@ elif which putclip >/dev/null 2>&1 ; then
 alias -g C='| putclip'
 fi
 
+# ssh
 alias sshb='ssh brain'
 alias sshp='ssh raspi'
 alias sshv='ssh vagrant_atMyDocument'
+alias ssht='ssh titan'
+alias sshs='ssh sakura'
+alias sshts='ssh tfs'
+alias sshtp='ssh tfp'
+alias sshtop='ssh tfop'
+
+alias sshr='ssh go'
+
+alias sshh='ssh home'
+
+# vagrant
 alias vagDup='cd ~/Documents/vagrant &&vagrant up'
 alias vagDhalt='cd ~/Documents/vagrant &&vagrant halt'
-alias nlp='cd /Users/rokumura/Dropbox/programming/Knock100'
-alias bpush='python /Users/rokumura/Dropbox/programming/Knock100/pushToBrain.py'
+
+# nlp
+alias nlp='cd /Users/rokumura/Documents/programming/Knock100'
+alias bpush='python /Users/rokumura/Documents/programming/Knock100/pushToBrain.py'
+alias cnlp.sh='/usr/local/lib/stanford-corenlp-full-2016-10-31/corenlp.sh'
+
 alias pwc='pwd | pbcopy'
+
+alias gpom='git push origin master'
+
+alias latexmk='latexmk -pvc'
+# pyenv
+alias pv='pyenv local'
+alias pe='pyenv'
+alias pevs='pyenv versions'
+alias pel='pyenv local'
+
+alias ptp='ptpython'
+
+alias fp='~/.fullpath.sh'
+
+# brainとファイルを同期
+alias rscp='sh .MyRsync'
+
+alias sr='screen -r'
+
+alias rcp='rsync -av --progress'
+
+# golang
+alias gb='go build'
+alias gr='go run'
+
+# golang クロスコンパイル
+alias wgb='GOOS=windows GOARCH=amd64 go build'
+alias lgb='GOOS=linux GOARCH=amd64 go build'
+alias dgb='GOOS=darwin GOARCH=amd64 go build'
