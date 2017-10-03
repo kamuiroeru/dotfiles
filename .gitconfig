@@ -1,8 +1,9 @@
 [core]
 	editor = vim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/rokumura/.gitignore_global
 	pager = view
+	autocrlf = input
 [web]
 	browser = google-chrome
 [push]
@@ -71,3 +72,6 @@
 		done
 
 	k = !gitk&
+[user]
+	name = KamuiRoeru
+	email = e1371@s.akashi.ac.jp
