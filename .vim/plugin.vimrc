@@ -50,12 +50,39 @@ else
     " NeoBundle 'Shougo/neocomplcache.vim'
 endif
 
-NeoBundle 'davidhalter/jedi-vim'
+" ~/.pyenv/shimsを$PATHに追加
+" jedi-vim や vim-pyenc のロードよりも先に行う必要がある、はず。
+let $PATH = "~/.pyenv/shims:".$PATH
+
+" ... neobundle.vim 初期化等
+
+" DJANGO_SETTINGS_MODULE を自動設定
+NeoBundleLazy "lambdalisue/vim-django-support", {
+      \ "autoload": {
+      \   "filetypes": ["python", "python3", "djangohtml"]
+      \ }}
+
+" 補完用に jedi-vim を追加
+NeoBundle "davidhalter/jedi-vim"
+
+" pyenv 処理用に vim-pyenv を追加
+" Note: depends が指定されているため jedi-vim より後にロードされる（ことを期待）
+NeoBundleLazy "lambdalisue/vim-pyenv", {
+      \ "depends": ['davidhalter/jedi-vim'],
+      \ "autoload": {
+      \   "filetypes": ["python", "python3", "djangohtml"]
+      \ }}
+
+" ... neobundle.vim 終了処理等
+
+"NeoBundle 'davidhalter/jedi-vim'
 " NeoBundleLazy 'lambdalisue/vim-pyenv', {
 "         \ 'depends': ['davidhalter/jedi-vim'],
 "         \ 'autoload': {
 "         \   'filetypes': ['python', 'python3'],
 "         \ }}
+
+
 NeoBundle 'ervandew/supertab'
 call neobundle#end()
 
