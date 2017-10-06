@@ -127,4 +127,4 @@ endfunction
 
 " ~/.pyenv/shims を $PATH に追加する
 " これを行わないとpythonが正しく検索されない
-call IncludePath(expand("~/.pyenv/shims"))
+" call IncludePath(expand("~/.pyenv/shims"))
