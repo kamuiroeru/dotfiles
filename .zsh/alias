@@ -64,6 +64,7 @@ alias sshtop='ssh tfop'
 alias sshr='ssh go'
 
 alias sshh='ssh home'
+alias sshth='ssh tfh'
 alias sshtho='ssh tfho'
 
 # vagrant
