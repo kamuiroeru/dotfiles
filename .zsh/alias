@@ -64,6 +64,7 @@ alias sshtop='ssh tfop'
 alias sshr='ssh go'
 
 alias sshh='ssh home'
+alias sshtho='ssh tfho'
 
 # vagrant
 alias vagDup='cd ~/Documents/vagrant &&vagrant up'
