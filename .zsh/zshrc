@@ -143,11 +143,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # rbenv
-eval "$(rbenv init -)"
+if [ -x "`which rbenv 2>/dev/null`" ]; then
+    eval "$(rbenv init -)"
+fi
 
 # nodejs (nodebrew)
 # export PATH="$PATH:$HOME/.nodebrew/current/bin"
 
 # go
-export PATH=$PATH:$(go env GOPATH)/bin
-export GOPATH=$(go env GOPATH)
+if [ -x "`which go 2>/dev/null`" ]; then
+    export PATH=$PATH:$(go env GOPATH)/bin
+    export GOPATH=$(go env GOPATH)
+fi
