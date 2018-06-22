@@ -20,4 +20,4 @@ chpwd() {
 
 check_pyvenv
 
-. /Users/rokumura/anaconda3/etc/profile.d/conda.sh
+. $HOME/anaconda3/etc/profile.d/conda.sh
