@@ -1,4 +1,8 @@
 ## めっちゃ雑ですが、cloneしたら、その場で `source dotfiles/README.md` を打ってください。
+### Requirements
+- zsh
+- nvim
+- screen
 
 #### インストール処理（ `source dotfiles/README.md` により、以下が実行されます。）
 ```
