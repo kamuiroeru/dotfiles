@@ -18,6 +18,9 @@ if [ ! -d "$~/.config" ]; then
 fi
 ln -s ../dotfiles/.config/nvim .config
 
+# screen
+ln -s dotfiles/.screenrc .
+
 # git alias
 git config --global alias.s status
 git config --global alias.co checkout
