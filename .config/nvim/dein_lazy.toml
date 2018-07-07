@@ -10,6 +10,20 @@ on_ft = ['md', 'markdown']
 # repo = 'davidhalter/jedi-vim'
 # on_ft = ['python']
 
+#[[plugins]]
+#repo = 'Shougo/deoplete.nvim'
+#hook_source = 'let g:deoplete#enable_at_startup = 1'
+
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
 on_ft = ['python']
+#depends = 'deoplete.nvim'
+
+#[[plugins]]
+#repo = 'zchee/deoplete-clang'
+#hock_source = '''
+#    let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/6.0.0/lib/libclang.dylib'
+#    let g:deoplete#sources#clang#clang_header = '/usr/include/c++'
+#'''
+#on_ft = ['c']
+#depends = 'deoplete.nvim'
