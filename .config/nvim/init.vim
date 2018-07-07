@@ -32,9 +32,6 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
-filetype plugin indent on
-syntax enable
-colorscheme molokai
 
 " If you want to install not installed plugins on startup.
 if dein#check_install()
@@ -44,6 +41,9 @@ endif
 
 
 " vimの設定
+colorscheme molokai
+filetype plugin indent on
+syntax enable
 let mapleader = "\<Space>"
 ": と ; 入れ替え
 nnoremap ; :
@@ -117,3 +117,9 @@ let g:quickrun_config = {
 " 実行時に前回の表示内容をクローズ&保存してから実行
 let g:quickrun_no_default_key_mappings = 1
 nnoremap <silent><C-r> :cclose<CR>:write<CR>:QuickRun -mode n<CR>
+
+" 表示位置保存
+augroup vimrcEx
+  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+  \ exe "normal g`\"" | endif
+augroup END
