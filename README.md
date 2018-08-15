@@ -32,4 +32,7 @@ git config --global alias.b branch
 git config --global alias.c commit
 git config --global alias.d diff
 git config --global alias.g grep
+
+# myScript
+ln -s dotfiles/.myscript .
 ```
