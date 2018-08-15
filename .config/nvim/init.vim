@@ -123,3 +123,11 @@ augroup vimrcEx
   au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
   \ exe "normal g`\"" | endif
 augroup END
+
+" SMBでnofsync
+if system("pwd")[:7] == "/Volumes"
+    set nofsync
+endif
+
+"leader を spaceに
+let mapleader = "\<Space>"
