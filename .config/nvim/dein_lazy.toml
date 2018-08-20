@@ -8,7 +8,11 @@ on_ft = ['md', 'markdown']
 
 [[plugins]]
 repo = 'davidhalter/jedi-vim'
-hook_source = 'let g:jedi#completions_enabled = 0'
+hook_source = '''
+    let g:jedi#completions_enabled = 0
+    let g:jedi#show_call_signatures_delay = 100    
+    "let g:jedi#show_call_signatures = 0    
+'''
 on_ft = ['python']
 
 #[[plugins]]
@@ -32,3 +36,5 @@ hook_source = '''
 #'''
 #on_ft = ['c']
 #depends = 'deoplete.nvim'
+
+
