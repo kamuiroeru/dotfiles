@@ -158,3 +158,8 @@ alias vim='nvim'
 
 # myScript
 alias weblio='python ~/.myscript/weblio.py'
+
+# tarとpigz
+function tpigz() {
+    command \tar -cf $1.tar.gz --use-compress-prog=pigz $2
+}
