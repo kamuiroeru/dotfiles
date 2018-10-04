@@ -25,14 +25,23 @@ def trans_eng_jpn(s):
 
 
 import pandas as pd
-def makeMeanExcelFile(queries: list, outfname='out.xlsx'):
+from time import sleep
+def makeExcelFile(queries: list, outfname='out.xlsx'):
     trans_list = []
     for s in queries:
+        sleep(0.5)
         transed = trans_eng_jpn(s)
-        if len(transed) == 1:
-            trans_list.append(transed)
-        else:
+        if not transed:
             trans_list.append('__Not Found__')
+        else:
+            if isinstance(transed, str):
+                trans_list.append(transed)
+            elif len(transed) == 2:
+                s = '__not Found__\n'
+                s += 'もしかして…\n'
+                s += '\n'.join(['{}: {}'.format(w, m) for w, m in zip(*transed)])
+                trans_list.append(s)
+        print(s)
     df = pd.DataFrame({'query': queries, 'trans': trans_list})
     df.to_excel(outfname)
 
