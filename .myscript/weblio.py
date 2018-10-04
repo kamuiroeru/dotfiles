@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 # stringを入力する場合
 # query = lambda s: 'https://ejje.weblio.jp/content/{}'.format('+'.join(s.split(' ')))
 
-query = lambda s: 'https://ejje.weblio.jp/content/{}'.format('+'.join(s))
+query = lambda l: 'https://ejje.weblio.jp/content/{}'.format('+'.join(l))
 
 
 def trans_eng_jpn(s):
@@ -22,6 +22,7 @@ def trans_eng_jpn(s):
             return words, meanings
         else:
             return None
+
 
 if __name__ == '__main__':
     from sys import argv
