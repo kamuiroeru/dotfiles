@@ -24,6 +24,19 @@ def trans_eng_jpn(s):
             return None
 
 
+import pandas as pd
+def makeMeanExcelFile(queries: list, outfname='out.xlsx'):
+    trans_list = []
+    for s in queries:
+        transed = trans_eng_jpn(s)
+        if len(transed) == 1:
+            trans_list.append(transed)
+        else:
+            trans_list.append('__Not Found__')
+    df = pd.DataFrame({'query': queries, 'trans': trans_list})
+    df.to_excel(outfname)
+
+
 if __name__ == '__main__':
     from sys import argv
     s = argv[1:]
