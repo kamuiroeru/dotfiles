@@ -163,3 +163,8 @@ alias weblio='python ~/.myscript/weblio.py'
 function tpigz() {
     command \tar -cf $1.tar.gz --use-compress-prog=pigz $2
 }
+
+# no ft で vimを開く
+function vimn() {
+    command nvim -c 'noau e $1'
+}
