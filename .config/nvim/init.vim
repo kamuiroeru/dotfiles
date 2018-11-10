@@ -152,3 +152,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 " バッファ設定
 nnoremap <silent> <C-j> :bprev<CR>
 nnoremap <silent> <C-k> :bnext<CR>
+
+" ノーマルモードに戻ったときにペーストモード解除
+autocmd InsertLeave * set nopaste
