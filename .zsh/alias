@@ -111,6 +111,7 @@ alias fp='~/.fullpath.sh'
 alias rscp='sh .MyRsync'
 
 alias sr='screen -r'
+alias ss='screen -S'
 
 alias rcp='rsync -av --progress'
 
