@@ -123,7 +123,8 @@ if [ -e $ZDOTDIR/zshrc.local ]; then
 fi
 
 # anacondaのpath
-export PATH=$HOME/anaconda3/bin:$PATH
+export CONDAROOT=$HOME/anaconda3
+export PATH=$CONDAROOT/bin:$PATH
 
 # ローカル環境だけのソフトウェア(優先順位高)
 export PATH=$HOME/usr/bin:$PATH

@@ -20,4 +20,4 @@ chpwd() {
 
 check_pyvenv
 
-. $HOME/anaconda3/etc/profile.d/conda.sh
+. $CONDAROOT/etc/profile.d/conda.sh
