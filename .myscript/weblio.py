@@ -46,17 +46,31 @@ def makeExcelFile(queries: list, outfname='out.xlsx'):
     df.to_excel(outfname)
 
 
-if __name__ == '__main__':
-    from sys import argv
-    s = argv[1:]
-    transed = trans_eng_jpn(s)
-    if not transed:
-        print('「{}」に一致するもが見つかりませんでした。'.format(' '.join(s)))
+def txt2excel(input_filename: str, output_filename=''):
+    l = [w.strip() for w in open(input_filename) if w.strip()]
+    if output_filename:
+        makeExcelFile(l, outfname=output_filename)
     else:
-        if isinstance(transed, str):
-            print(transed)
-        elif len(transed) == 2:
-            print('「{}」に一致するものが見つかりませんでした。'.format(' '.join(s)))
-            print('もしかして…')
-            for w, m in zip(*transed):
-                print('   {}: {}'.format(w, m))
+        makeExcelFile(l)
+
+
+if __name__ == '__main__':
+    from prompt_toolkit import PromptSession
+    session = PromptSession()
+    while True:
+        try:
+            s = session.prompt('eng or jpn >>>')
+        except EOFError:
+            print('Exit...')
+            break
+        transed = trans_eng_jpn(s)
+        if not transed:
+            print('「{}」に一致するもが見つかりませんでした。'.format(' '.join(s)))
+        else:
+            if isinstance(transed, str):
+                print(transed)
+            elif len(transed) == 2:
+                print('「{}」に一致するものが見つかりませんでした。'.format(' '.join(s)))
+                print('もしかして…')
+                for w, m in zip(*transed):
+                    print('   {}: {}'.format(w, m))
