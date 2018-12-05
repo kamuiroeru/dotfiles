@@ -155,3 +155,17 @@ nnoremap <silent> <C-k> :bnext<CR>
 
 " ノーマルモードに戻ったときにペーストモード解除
 autocmd InsertLeave * set nopaste
+
+
+" 補完にどのpythonを使うか設定
+" anacondaの状態やvenvの状態によって変わる
+" $CONDAROOTはanacondaのインストール先のディレクトリ
+" $VIRTUAL_ENVはvenvのディレクトリ
+" 優先順位 venv > condaenv > conda > system
+if $CONDAROOT
+    let g:python3_host_prog = $CONDAROOT/bin/python
+elseif $CONDA_PREFIX
+    let g:python3_host_prog = $CONDA_PREFIX/bin/python
+elseif $VIRTUAL_ENV
+    let g:python3_host_prog = $VIRTUAL_ENV/bin/python
+endif
