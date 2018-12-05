@@ -17,13 +17,27 @@ ln -s dotfiles/.zsh .
 ln -s dotfiles/.gitconfig .
 
 # nvim
-if [ ! -d "$~/.config" ]; then
-    mkdir ~/.config
-fi
-ln -s ../dotfiles/.config/nvim .config
+read -p "Install neovim settings? [y/n]" ans1
+case $ans1 in
+    [Yy] | [Yy][Ee][Ss] )
+	if [ ! -d "$~/.config" ]; then
+	    mkdir ~/.config
+	fi
+	ln -s ../dotfiles/.config/nvim .config
+        ;;
+    [nN] | no )
+        echo "Skip!";;
+esac
 
 # screen
-ln -s dotfiles/.screenrc .
+read -p "Install neovim settings? [y/n]" ans1
+case $ans1 in
+    [Yy] | [Yy][Ee][Ss] )
+	ln -s dotfiles/.screenrc .
+        ;;
+    [nN] | no )
+        echo "Skip!";;
+esac
 
 # git alias
 git config --global alias.s status
@@ -35,4 +49,6 @@ git config --global alias.g grep
 
 # myScript
 ln -s dotfiles/.myscript .
+
+echo "Finish!!!"
 ```
