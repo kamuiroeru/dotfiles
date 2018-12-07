@@ -116,21 +116,9 @@ bindkey '^R' history-incremental-pattern-search-backward
 export PATH=$PATH:$LOCAL_PATH
 
 ########################################
+
 source $ZDOTDIR/alias
 source $ZDOTDIR/zshhook
 if [ -e $ZDOTDIR/zshrc.local ]; then
     source $ZDOTDIR/zshrc.local
 fi
-
-# anacondaのpath
-export CONDAROOT=$HOME/anaconda3
-export PATH=$CONDAROOT/bin:$PATH
-
-# ローカル環境だけのソフトウェア(優先順位高)
-export PATH=$HOME/usr/bin:$PATH
-
-# ImageMagick
-export LD_LIBRARY_PATH=/usr/local/lib
-
-# nodebrew
-export PATH=$PATH:$HOME/.nodebrew/current/bin
