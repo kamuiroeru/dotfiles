@@ -41,7 +41,10 @@ endif
 
 
 " vimの設定
-colorscheme molokai
+" colorscheme molokai
+set background=dark
+colorscheme hybrid
+
 filetype plugin indent on
 syntax enable
 let mapleader = "\<Space>"
@@ -162,10 +165,24 @@ autocmd InsertLeave * set nopaste
 " $CONDAROOTはanacondaのインストール先のディレクトリ
 " $VIRTUAL_ENVはvenvのディレクトリ
 " 優先順位 venv > condaenv > conda > system
-if $CONDAROOT
-    let g:python3_host_prog = $CONDAROOT/bin/python
+if $CONDA_ROOT
+    let g:python3_host_prog = $CONDA_ROOT/bin/python
 elseif $CONDA_PREFIX
     let g:python3_host_prog = $CONDA_PREFIX/bin/python
 elseif $VIRTUAL_ENV
     let g:python3_host_prog = $VIRTUAL_ENV/bin/python
+endif
+
+" マルチカーソルの時にdepleteを無効化
+function g:Multiple_cursors_before()
+    call deoplete#custom#buffer_option('auto_complete', v:false)
+endfunction
+function g:Multiple_cursors_after()
+    call deoplete#custom#buffer_option('auto_complete', v:true)
+endfunction
+
+" C/C++用のLLVM
+let g:llvm_root = $LLVM_ROOT
+if !strlen($LLVM_ROOT)
+    autocmd FileType c call deoplete#disable()
 endif
