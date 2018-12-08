@@ -9,7 +9,7 @@ defbce on
 term xterm-256color
 
 shelltitle "$ |zsh"
-hardstatus alwayslastline "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %Y %m/%d %C%a "
+hardstatus alwayslastline "%{.Bw}%-w%{.rw}%n %t%{-}%+w %=%{..g} %H %{..y} %Y %m/%d %C%a "
 hardstatus off
 
 escape ^Tt
@@ -34,3 +34,7 @@ screen 1
 screen 0
 
 defmousetrack on
+
+# 履歴を多く見れるように
+defscrollback 1000
+
