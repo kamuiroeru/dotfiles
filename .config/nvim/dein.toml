@@ -29,8 +29,12 @@ repo = 'itchyny/lightline.vim'
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 
+# マルチカーソルと範囲選択
 [[plugins]]
 repo = 'terryma/vim-multiple-cursors'
+
+[[plugins]]
+repo = 'terryma/vim-expand-region'
 
 [[plugins]]
 repo = 'tomasr/molokai'
