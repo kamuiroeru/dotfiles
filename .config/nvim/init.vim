@@ -195,6 +195,7 @@ function! Getblock2lines()
     call BlockDiff_GetBlock2()
 endfunction
 nnoremap <Leader>b :call Getblock2lines()<CR>
+nnoremap <Leader>q :execute ":tabclose"<CR>
 
 " 範囲拡大
 vmap v <Plug>(expand_region_expand)
