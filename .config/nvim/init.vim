@@ -1,3 +1,9 @@
+" C/C++用のLLVM
+let g:llvm_root = $LLVM_ROOT
+if !strlen($LLVM_ROOT)
+    autocmd FileType c call deoplete#disable()
+endif
+
 if &compatible
   set nocompatible
 endif
@@ -181,8 +187,11 @@ function g:Multiple_cursors_after()
     call deoplete#custom#buffer_option('auto_complete', v:true)
 endfunction
 
-" C/C++用のLLVM
-let g:llvm_root = $LLVM_ROOT
-if !strlen($LLVM_ROOT)
-    autocmd FileType c call deoplete#disable()
-endif
+" BlockDiffのカーソルから2行やるやつ
+function! Getblock2lines()
+    call BlockDiff_GetBlock1()
+    "yy"
+    call cursor(line(".") + 1, '.')
+    call BlockDiff_GetBlock2()
+endfunction
+nnoremap <Leader>b :call Getblock2lines()<CR>

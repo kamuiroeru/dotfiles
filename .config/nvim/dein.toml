@@ -70,3 +70,11 @@ repo = 'Shougo/denite.nvim'
 
 [[plugins]]
 repo = 'w0ng/vim-hybrid.git'
+
+# 矩形ペーストするやつ
+[[plugins]]
+repo = 'hekyou/vim-rectinsert'
+
+# 選択diffやるやつ
+[[plugins]]
+repo = 'kamuiroeru/BlockDiff'
