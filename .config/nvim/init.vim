@@ -98,8 +98,6 @@ nnoremap <C-i> "i:QuickRun -outputter/buffer/split ":botright"<CR>"
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
 
-let $PATH = "~/.pyenv/shims:".$PATH
-
 " 常に補完開始
 let g:deoplete#enable_at_startup = 1
 
@@ -182,9 +180,15 @@ endif
 " マルチカーソルの時にdepleteを無効化
 function g:Multiple_cursors_before()
     call deoplete#custom#buffer_option('auto_complete', v:false)
+    if exists(':NeoCompleteLock')==2
+	exe 'NeoCompleteLock'
+    endif
 endfunction
 function g:Multiple_cursors_after()
     call deoplete#custom#buffer_option('auto_complete', v:true)
+    if exists(':NeoCompleteUnlock')==2
+	exe 'NeoCompleteUnlock'
+    endif
 endfunction
 
 " BlockDiffのカーソルから2行やるやつ
