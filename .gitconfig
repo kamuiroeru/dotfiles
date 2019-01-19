@@ -46,8 +46,9 @@
 	plom = pull origin master
 	l = log
 	d = diff
-	dt = difftool
 	dca = diff --cached
+	dt = difftool
+	dtca = difftool --cached
 	st = stash
 	pop = stash pop
 	r = rebase
