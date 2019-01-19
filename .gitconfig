@@ -1,5 +1,5 @@
 [core]
-	editor = vim
+	editor = nvim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = /Users/rokumura/.gitignore_global
 	pager = view
@@ -25,7 +25,7 @@
 	changed = yellow bold
 	untracked = red bold
 [diff]
-	tool = vimdiff
+	tool = nvim -d
 [pager]
 	log = less
 	show = less
@@ -73,5 +73,12 @@
 
 	k = !gitk&
 [user]
-	name = KamuiRoeru
-	email = e1371@s.akashi.ac.jp
+	name = <UserName>
+	email = <Email>
+[merge]
+    tool = nvim
+    prompt = false
+[mergetool "nvim"]
+  cmd = nvim -c '2wincmd w | diffthis | 3wincmd w | diffthis | 1wincmd w | wincmd J' -O $MERGED $LOCAL $REMOTE
+[difftool "nvim"]
+    prompt = false
