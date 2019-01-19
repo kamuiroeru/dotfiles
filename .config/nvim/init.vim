@@ -169,12 +169,12 @@ autocmd InsertLeave * set nopaste
 " $CONDAROOTはanacondaのインストール先のディレクトリ
 " $VIRTUAL_ENVはvenvのディレクトリ
 " 優先順位 venv > condaenv > conda > system
-if $CONDA_ROOT
-    let g:python3_host_prog = $CONDA_ROOT/bin/python
+if $VIRTUAL_ENV
+    let g:python3_host_prog = $VIRTUAL_ENV/bin/python
 elseif $CONDA_PREFIX
     let g:python3_host_prog = $CONDA_PREFIX/bin/python
-elseif $VIRTUAL_ENV
-    let g:python3_host_prog = $VIRTUAL_ENV/bin/python
+elseif $CONDA_ROOT
+    let g:python3_host_prog = $CONDA_ROOT/bin/python
 endif
 
 " マルチカーソルの時にdepleteを無効化
