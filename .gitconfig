@@ -31,6 +31,7 @@
 	show = less
 	diff = less
 	branch = false
+	reflog = false
 [alias]
 	co = checkout
 	cob = checkout -b
