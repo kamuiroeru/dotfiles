@@ -1,0 +1,7 @@
+[user]
+	name = <Username>
+	email = <Email>
+[credential]
+	helper = osxkeychain
+[url "https://"]
+	insteadOf = git://
