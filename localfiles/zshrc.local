@@ -1,0 +1,19 @@
+# LLVM: nvimのC/C++補完で必要
+export LLVM_ROOT=/usr/local/Cellar/llvm/6.0.0
+
+# condaのpath
+export CONDA_ROOT=<CONDAROOT>
+export PATH=$CONDA_ROOT/bin:$PATH
+. $CONDA_ROOT/etc/profile.d/conda.sh
+
+# ローカル環境だけのソフトウェア(優先順位高)
+export PATH=$HOME/usr/bin:$PATH
+
+# ImageMagick
+export LD_LIBRARY_PATH=/usr/local/lib
+
+# nodebrew
+export PATH=$PATH:$HOME/.nodebrew/current/bin
+
+export PATH=/usr/local/sbin:$PATH
+export PATH=$HOME/.local/bin:$PATH

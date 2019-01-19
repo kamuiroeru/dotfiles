@@ -47,4 +47,8 @@ git config --global alias.g grep
 ln -s dotfiles/.myscript .
 
 echo "Finish!!!"
+
+cp dotfiles/localfiles/zshrc.local ./zsh/zshrc.local
+cp dotfiles/localfiles/.gitconfig.local .
+echo "$HOME/.gitconfig.localと$HOME/.zsh/zshrc.localを編集してください"
 ```
