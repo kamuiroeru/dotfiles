@@ -4,4 +4,4 @@ sudo apt install software-properties-common -y
 sudo apt-add-repository ppa:neovim-ppa/stable -y
 sudo apt update
 sudo apt install neovim -y
-pip install neovim
+pip install pynvim
