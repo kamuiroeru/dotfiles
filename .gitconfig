@@ -80,7 +80,7 @@
 	cmd = nvim -c '2wincmd w | diffthis | 3wincmd w | diffthis | 1wincmd w | wincmd J' -O $MERGED $LOCAL $REMOTE
 [diff]
 	tool = nvim
-[difftool "nvim"]
 	prompt = false
+[difftool "nvim"]
 [include]
 	path = .gitconfig.local
