@@ -31,21 +31,22 @@
 	show = less
 	diff = less
 [alias]
-    co = checkout
-    cob = checkout -b
-    s = status
-    a = add
+	co = checkout
+	cob = checkout -b
+	s = status
+	a = add
 	aa = add .
-    c = commit
-    cm = commit -m
-    b = branch
-    br = branch -r
-    pso = push origin
-    psof = push -f origin
-    plo = pull origin
-    plom = pull origin master
-    l = log
+	c = commit
+	cm = commit -m
+	b = branch
+	br = branch -r
+	pso = push origin
+	psof = push -f origin
+	plo = pull origin
+	plom = pull origin master
+	l = log
 	d = diff
+	dt = difftool
 	dca = diff --cached
 	st = stash
 	pop = stash pop
@@ -60,11 +61,11 @@
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	lga = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	logg = log --stat --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Cblue%cn%Cred%d %Creset%s %C(cyan)%b'
-    mergelog = log --merges --pretty=format:'%C(yellow)%h %Cgreen%ci %Cblue%cn%Cred%d %Creset%s %C(cyan)%b'
-    history = log --graph --date=short --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cd %Cblue%cn%Cred%d %Creset%s'
-    unmerged = !git --no-pager diff --name-only --diff-filter=U
-    sync = !git checkout master && git pull origin master && git fetch -p origin && git branch -d $(git branch --merged | grep -v master | grep -v '*')
-    discard-local = fetch origin && reset --hard origin/master
+	mergelog = log --merges --pretty=format:'%C(yellow)%h %Cgreen%ci %Cblue%cn%Cred%d %Creset%s %C(cyan)%b'
+	history = log --graph --date=short --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cd %Cblue%cn%Cred%d %Creset%s'
+	unmerged = !git --no-pager diff --name-only --diff-filter=U
+	sync = !git checkout master && git pull origin master && git fetch -p origin && git branch -d $(git branch --merged | grep -v master | grep -v '*')
+	discard-local = fetch origin && reset --hard origin/master
 	lbd = !for i in {1..$1}\
 		do\
 		git diff HEAD~ HEAD\
@@ -72,17 +73,14 @@
 		done
 
 	k = !gitk&
-[user]
-	name = <UserName>
-	email = <Email>
 [merge]
-    tool = nvim
-    prompt = false
+	tool = nvim
+	prompt = false
 [mergetool "nvim"]
-  cmd = nvim -c '2wincmd w | diffthis | 3wincmd w | diffthis | 1wincmd w | wincmd J' -O $MERGED $LOCAL $REMOTE
+	cmd = nvim -c '2wincmd w | diffthis | 3wincmd w | diffthis | 1wincmd w | wincmd J' -O $MERGED $LOCAL $REMOTE
 [diff]
-    tool = nvim
+	tool = nvim
 [difftool "nvim"]
-    prompt = false
+	prompt = false
 [include]
-    path = .gitconfig.local
+	path = .gitconfig.local
