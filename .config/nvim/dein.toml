@@ -82,3 +82,7 @@ repo = 'hekyou/vim-rectinsert'
 # 選択diffやるやつ
 [[plugins]]
 repo = 'kamuiroeru/BlockDiff'
+
+# 単語ごとにdiffするやつ
+[[plugins]]
+repo = 'rickhowe/diffchar.vim'

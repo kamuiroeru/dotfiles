@@ -204,3 +204,7 @@ nnoremap <Leader>q :execute ":tabclose"<CR>
 " 範囲拡大
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+
+" diffcharの設定
+let g:DiffUnit = 'Char' " any single character
+let g:DiffColors = 3 " 16 colors in fixed order
