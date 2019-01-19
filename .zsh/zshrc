@@ -119,6 +119,17 @@ export PATH=$PATH:$LOCAL_PATH
 
 source $ZDOTDIR/alias
 source $ZDOTDIR/zshhook
-if [ -e $ZDOTDIR/zshrc.local ]; then
-    source $ZDOTDIR/zshrc.local
+if [ -e $HOME/.zshrc.local ]; then
+    source $HOME/.zshrc.local
 fi
+
+# プラグイン
+fpath=($ZDOTDIR/functions/* $fpath)
+rm -f ~/.zcompdump; compinit
+
+# gitで^を自動エスケープしてくれる
+autoload -Uz git-escape-magic
+git-escape-magic
+
+# zsh-completions(導入済み)
+
