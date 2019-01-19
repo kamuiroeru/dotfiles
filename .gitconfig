@@ -30,6 +30,7 @@
 	log = less
 	show = less
 	diff = less
+	branch = false
 [alias]
 	co = checkout
 	cob = checkout -b
@@ -74,6 +75,7 @@
 		done
 
 	k = !gitk&
+	pullall = !git pull && git submodule update --init --recursive
 [merge]
 	tool = nvim
 	prompt = false
@@ -85,3 +87,5 @@
 [difftool "nvim"]
 [include]
 	path = .gitconfig.local
+[submodule]
+	recurse = true
