@@ -10,7 +10,7 @@ ln -s dotfiles/.zsh .
 ln -s dotfiles/.gitconfig .
 
 # nvim
-echo "Install neovim settings?(y/N): "
+printf "Install neovim settings?(y/N): "
 if read -q; then
     if [ ! -d "$~/.config" ]; then
 	mkdir ~/.config
@@ -21,7 +21,7 @@ else
 fi
 
 # screen
-echo "Install screen settings?(y/N): "
+printf "Install screen settings?(y/N): "
 if read -q; then
     ln -s dotfiles/.screenrc .
 else
