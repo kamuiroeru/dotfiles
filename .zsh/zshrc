@@ -79,6 +79,7 @@ setopt beep
 
 # フローコントロールを無効にする
 setopt no_flow_control
+stty stop undef  # ctrl s の fwd-i-searchを無効化
 
 # '#' 以降をコメントとして扱う
 setopt interactive_comments
