@@ -6,7 +6,8 @@
 - neovim
     - pynvim 
 - screen
-- gawk
+- gawk (無くても良いが、zplugでエラーが出る)
+- fzy（などのインタラクティブフィルタ）
 
 
 #### How To Use

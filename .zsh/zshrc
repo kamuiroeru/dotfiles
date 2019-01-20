@@ -126,7 +126,7 @@ fi
 # プラグイン
 source ~/.zplug/init.zsh
 
-source $ZDOTDIR/zplug
+source $ZDOTDIR/zplug.zsh
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
