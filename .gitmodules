@@ -1,6 +1,0 @@
-[submodule ".zsh/functions/zsh-completions"]
-	path = .zsh/functions/zsh-completions
-	url = https://github.com/zsh-users/zsh-completions.git
-[submodule ".zsh/functions/zsh-git-escape-magic"]
-	path = .zsh/functions/zsh-git-escape-magic
-	url = https://github.com/knu/zsh-git-escape-magic.git
