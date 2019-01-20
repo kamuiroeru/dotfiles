@@ -124,12 +124,15 @@ if [ -e $HOME/.zshrc.local ]; then
 fi
 
 # プラグイン
-fpath=($ZDOTDIR/functions/* $fpath)
-rm -f ~/.zcompdump; compinit
+source ~/.zplug/init.zsh
 
-# gitで^を自動エスケープしてくれる
-autoload -Uz git-escape-magic
-git-escape-magic
-
-# zsh-completions(導入済み)
-
+source $ZDOTDIR/zplug
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+fi
+# Then, source plugins and add commands to $PATH
+zplug load

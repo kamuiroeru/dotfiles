@@ -1,10 +1,12 @@
 ## my Dotfiles
 ### Requirements
+- curl
 - git
 - zsh
 - neovim
     - pynvim 
 - screen
+- gawk
 
 
 #### How To Use
