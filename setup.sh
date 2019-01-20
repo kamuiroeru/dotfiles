@@ -3,6 +3,9 @@ cd ~
 ln -s dotfiles/.zshenv .
 ln -s dotfiles/.zsh .
 
+# zplug
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
+
 # vimはやめた
 # ln -s dotfiles/.vimrc .
 # ln -s dotfiles/.vim .
