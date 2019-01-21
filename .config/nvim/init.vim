@@ -164,19 +164,6 @@ nnoremap <silent> <C-k> :bnext<CR>
 autocmd InsertLeave * set nopaste
 
 
-" 補完にどのpythonを使うか設定
-" anacondaの状態やvenvの状態によって変わる
-" $CONDAROOTはanacondaのインストール先のディレクトリ
-" $VIRTUAL_ENVはvenvのディレクトリ
-" 優先順位 venv > condaenv > conda > system
-if $VIRTUAL_ENV
-    let g:python3_host_prog = $VIRTUAL_ENV/bin/python
-elseif $CONDA_PREFIX
-    let g:python3_host_prog = $CONDA_PREFIX/bin/python
-elseif $CONDA_ROOT
-    let g:python3_host_prog = $CONDA_ROOT/bin/python
-endif
-
 " マルチカーソルの時にdepleteを無効化
 function g:Multiple_cursors_before()
     call deoplete#custom#buffer_option('auto_complete', v:false)
