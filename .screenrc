@@ -40,3 +40,6 @@ defscrollback 50000
 
 # マウススクロール用
 # termcapinfo xterm* ti@:te@
+
+# デタッチした後も分割した状態を保持
+layout save default
