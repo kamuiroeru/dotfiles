@@ -8,8 +8,8 @@ altscreen on
 defbce on
 term xterm-256color
 
-shelltitle "$ |zsh"
-hardstatus alwayslastline "%{.Bw}%-w%{.rw}%n %t%{-}%+w %=%{..g} %H %{..y} %Y %m/%d %C%a "
+shelltitle "$ |shell"
+hardstatus alwayslastline "%{.Bw}%-w%{.rw}%n %t%{-}%+w %=%{..g} %H %{..y} %Y %m/%d %c:%s "
 hardstatus off
 
 escape ^Tt
