@@ -15,9 +15,6 @@ hook_source = '''
 '''
 on_ft = ['python']
 
-#[[plugins]]
-#repo = 'Shougo/deoplete.nvim'
-#hook_source = 'let g:deoplete#enable_at_startup = 1'
 
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
@@ -26,17 +23,17 @@ on_ft = ['python']
 hook_source = '''
     let g:deoplete#sources#jedi#server_timeout=100
     let g:deoplete#sources#jedi#statement_length=100
-    let g:python3_host_prog = system("which python")[:-2]
-'''
 
-#[[plugins]]
-#repo = 'zchee/deoplete-clang'
-#hock_source = '''
-#    let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/6.0.0/lib/libclang.dylib'
-#    let g:deoplete#sources#clang#clang_header = '/usr/include/c++'
-#'''
-#on_ft = ['c']
-#depends = 'deoplete.nvim'
+    let s:python = system("which python")[:-2]
+    let g:deoplete#sources#jedi#python_path = s:python
+    if split(system("python -V"), " ")[1][0] == "3"
+	let g:python3_host_prog = s:python
+	let g:jedi#force_py_version = 3
+    else
+	let g:python_host_prog = s:python
+	let g:jedi#force_py_version = 2
+    endif
+'''
 
 
 # c/c++の補完 llvmの場所が無いとだめ
@@ -57,3 +54,4 @@ depends = ['deoplete.nvim']
 repo = 'Shougo/neoinclude.vim'
 on_ft = ['c', 'cpp']
 depends = ['deoplete.nvim']
+
