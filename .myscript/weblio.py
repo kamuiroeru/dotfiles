@@ -66,6 +66,8 @@ if __name__ == '__main__':
         transed = trans_eng_jpn(s)
         if not transed:
             print('「{}」に一致するもが見つかりませんでした。'.format(' '.join(s)))
+            q = query(s.split(' '))
+            print(f'検索リンク先はここです: {q}')
         else:
             if isinstance(transed, str):
                 print(transed)
