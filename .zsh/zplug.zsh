@@ -25,3 +25,6 @@ zplug "b4b4r07/emoji-cli", \
 
 
 zplug "chrissicool/zsh-256color"
+
+zplug "mollifier/cd-gitroot"
+alias cdu='cd-gitroot'
