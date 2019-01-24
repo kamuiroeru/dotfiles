@@ -3,22 +3,6 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
-hook_source = '''
-  let g:deoplete#enable_at_startup = 1
-  let g:deoplete#auto_complete_delay = 0
-  let g:deoplete#auto_complete_start_length = 1
-  let g:deoplete#enable_camel_case = 0
-  let g:deoplete#enable_ignore_case = 0
-  let g:deoplete#enable_refresh_always = 0
-  let g:deoplete#enable_smart_case = 1
-  let g:deoplete#file#enable_buffer_path = 1
-  let g:deoplete#max_list = 10000
-'''
-#hook_source = 'let g:deoplete#enable_at_startup = 1'
-#hock_source = '''
-#    let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/6.0.0/lib/libclang.dylib'
-#    let g:deoplete#sources#clang#clang_header = '/usr/include/c++'
-#'''
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
@@ -86,3 +70,23 @@ repo = 'kamuiroeru/BlockDiff'
 # 単語ごとにdiffするやつ
 [[plugins]]
 repo = 'rickhowe/diffchar.vim'
+
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = 'context_filetype'
+
+# tomlのシンタックスハイライト
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+# git系
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'

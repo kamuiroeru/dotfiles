@@ -178,6 +178,24 @@ function g:Multiple_cursors_after()
     endif
 endfunction
 
+
+" deopleteの設定
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_complete_delay = 0
+let g:deoplete#auto_complete_start_length = 1
+let g:deoplete#enable_camel_case = 0
+let g:deoplete#enable_ignore_case = 0
+let g:deoplete#enable_refresh_always = 0
+let g:deoplete#enable_smart_case = 1
+let g:deoplete#file#enable_buffer_path = 1
+let g:deoplete#max_list = 10000
+
+
+" 範囲拡大
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
+
 " BlockDiffのカーソルから2行やるやつ
 function! Getblock2lines()
     call BlockDiff_GetBlock1()
@@ -186,12 +204,18 @@ function! Getblock2lines()
     call BlockDiff_GetBlock2()
 endfunction
 nnoremap <Leader>b :call Getblock2lines()<CR>
-nnoremap <Leader>q :execute ":tabclose"<CR>
+nnoremap <Leader>q :tabclose<CR>
 
-" 範囲拡大
-vmap v <Plug>(expand_region_expand)
-vmap <C-v> <Plug>(expand_region_shrink)
 
 " diffcharの設定
 let g:DiffUnit = 'Char' " any single character
 let g:DiffColors = 3 " 16 colors in fixed order
+
+
+" figitive (git) の設定
+nnoremap [figitive] <Nop>
+nmap <Space>m [figitive]
+nnoremap <silent> [figitive]s :<C-u>Gstatus<CR>
+nnoremap <silent> [figitive]d :<C-u>Gdiff<CR>
+nnoremap <silent> [figitive]b :<C-u>Gblame<CR>
+nnoremap <silent> [figitive]l :<C-u>Glog<CR>
