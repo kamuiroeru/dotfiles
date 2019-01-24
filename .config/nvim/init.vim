@@ -219,3 +219,10 @@ nnoremap <silent> [figitive]s :<C-u>Gstatus<CR>
 nnoremap <silent> [figitive]d :<C-u>Gdiff<CR>
 nnoremap <silent> [figitive]b :<C-u>Gblame<CR>
 nnoremap <silent> [figitive]l :<C-u>Glog<CR>
+
+
+
+" 作業ディレクトリに .vimrcを置いてる場合、最後に読み込む
+if filereadable('.vimrc')
+    source .vimrc
+endif
