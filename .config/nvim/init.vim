@@ -221,6 +221,18 @@ nnoremap <silent> [figitive]b :<C-u>Gblame<CR>
 nnoremap <silent> [figitive]l :<C-u>Glog<CR>
 
 
+" indent-guidesの設定
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_auto_colors = 0
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven ctermbg=darkgrey
+
+
 
 " 作業ディレクトリに .vimrcを置いてる場合、最後に読み込む
 if filereadable('.vimrc')
