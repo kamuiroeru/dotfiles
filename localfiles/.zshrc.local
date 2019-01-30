@@ -20,3 +20,6 @@ export PATH=$PATH:$HOME/.nodebrew/current/bin
 
 export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+
+# texvim with TexSync
+export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
