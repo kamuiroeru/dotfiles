@@ -63,6 +63,7 @@ set backspace=indent,eol,start
 set number
 
 set shiftwidth=4
+set tabstop=4
 set autoindent
 set smartindent
 set mouse=a
@@ -86,7 +87,9 @@ filetype indent on
 "検索関係
 set hlsearch "検索結果をハイライト
 "ESC2回でハイライトを消す
-nnoremap <ESC><ESC> :noh<CR>
+nnoremap <ESC><ESC> :noh<CR><ESC>
+set ignorecase " 大文字と小文字を区別しない
+set smartcase " 大文字と小文字が混在した言葉で検索を行った場合に限り、大文字と小文字を区別する 
 
 " クリップボード共有
 set clipboard+=unnamed
@@ -223,7 +226,7 @@ nnoremap <silent> [figitive]l :<C-u>Glog<CR>
 
 " indent-guidesの設定
 let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tex', 'planetex']
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_auto_colors = 0
