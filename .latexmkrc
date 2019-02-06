@@ -26,5 +26,8 @@ $out_dir = '../build';
 # vimtexのコールバックでうまく動かなかったので、泥臭く解決
 # タイプセットがうまくいったときだけ、cpコマンドを打つ
 $success_cmd = 'nvr --remote-expr "vimtex#compiler#callback(1)"; cp -f %D ..';
-$failure_cmd = 'nvr --remote-expr "vimtex#compiler#callback(1)"';
-$warning_cmd = 'nvr --remote-expr "vimtex#compiler#callback(1)"';
+$failure_cmd = 'nvr --remote-expr "vimtex#compiler#callback(0)"';
+$warning_cmd = 'nvr --remote-expr "vimtex#compiler#callback(0)"';
+
+
+# https://github.com/PMOB/study-tex/blob/master/Tips/latexmk.md
