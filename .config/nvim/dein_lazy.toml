@@ -96,3 +96,8 @@ autocmd BufWrite *.tex silent! :call _auto_replace()
 nnoremap <silent> gf :e <cfile><cr>
 '''
 on_ft = ['tex', 'plaintex']
+
+
+[[plugins]]
+repo='wokalski/autocomplete-flow'
+on_ft=['javascript']
