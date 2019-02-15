@@ -20,9 +20,6 @@ $pdf_previewer = 'open -ga /Applications/Skim.app';
 # ディレクトリ指定
 $out_dir = '../build';
 
-# タイプセット成功時に、pdfだけを..にコピー
-# $success_cmd = 'cp -f %D ..';
-#
 # vimtexのコールバックでうまく動かなかったので、泥臭く解決
 # タイプセットがうまくいったときだけ、cpコマンドを打つ
 $success_cmd = 'nvr --remote-expr "vimtex#compiler#callback(1)"; cp -f %D ..';
@@ -30,4 +27,4 @@ $failure_cmd = 'nvr --remote-expr "vimtex#compiler#callback(0)"';
 $warning_cmd = 'nvr --remote-expr "vimtex#compiler#callback(0)"';
 
 
-# https://github.com/PMOB/study-tex/blob/master/Tips/latexmk.md
+# https://github.com/PMOB/study-tex/blob/master/Tips/latexmk.md 使い方いろいろ載ってる
