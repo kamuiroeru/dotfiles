@@ -241,3 +241,5 @@ hi IndentGuidesEven ctermbg=darkgrey
 if filereadable('.vimrc')
     source .vimrc
 endif
+
+nnoremap <silent> <leader>t :split<cr><C-w>w:terminal<cr>
