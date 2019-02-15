@@ -78,6 +78,8 @@
 
 	k = !gitk&
 	pullall = !git pull && git submodule update --init --recursive
+	graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+
 [merge]
 	tool = nvim
 	prompt = false
