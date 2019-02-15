@@ -2,9 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 
 # stringを入力する場合
-# query = lambda s: 'https://ejje.weblio.jp/content/{}'.format('+'.join(s.split(' ')))
+query = lambda s: 'https://ejje.weblio.jp/content/{}'.format('+'.join(s.split(' ')))
 
-query = lambda l: 'https://ejje.weblio.jp/content/{}'.format('+'.join(l))
+# query = lambda l: 'https://ejje.weblio.jp/content/{}'.format('+'.join(l))
 
 
 def trans_eng_jpn(s):
@@ -65,14 +65,14 @@ if __name__ == '__main__':
             break
         transed = trans_eng_jpn(s)
         if not transed:
-            print('「{}」に一致するもが見つかりませんでした。'.format(' '.join(s)))
-            q = query(s.split(' '))
+            print('「{}」に一致するもが見つかりませんでした。'.format(' '.join(s.split(' '))))
+            q = query(s)
             print(f'検索リンク先はここです: {q}')
         else:
             if isinstance(transed, str):
                 print(transed)
             elif len(transed) == 2:
-                print('「{}」に一致するものが見つかりませんでした。'.format(' '.join(s)))
+                print('「{}」に一致するものが見つかりませんでした。'.format(' '.join(s.split(' '))))
                 print('もしかして…')
                 for w, m in zip(*transed):
                     print('   {}: {}'.format(w, m))
