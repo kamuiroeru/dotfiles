@@ -235,6 +235,9 @@ let g:indent_guides_auto_colors = 0
 hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
 
+" space+tで縦分割してターミナル開く
+nnoremap <silent> <leader>t :split<cr><C-w>w:terminal<cr>
+
 
 
 " 作業ディレクトリに .vimrcを置いてる場合、最後に読み込む
@@ -242,4 +245,3 @@ if filereadable('.vimrc')
     source .vimrc
 endif
 
-nnoremap <silent> <leader>t :split<cr><C-w>w:terminal<cr>
