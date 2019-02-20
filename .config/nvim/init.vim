@@ -238,6 +238,8 @@ hi IndentGuidesEven ctermbg=darkgrey
 " space+tで縦分割してターミナル開く
 nnoremap <silent> <leader>t :split<cr><C-w>w:terminal<cr>
 
+" snippetのディレクトリ
+let g:neosnippet#snippets_directory = expand('~/.config/nvim/snippets')
 
 
 " 作業ディレクトリに .vimrcを置いてる場合、最後に読み込む
