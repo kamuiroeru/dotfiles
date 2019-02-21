@@ -158,7 +158,7 @@ alias vi='nvim'
 alias vim='nvim'
 
 # myScript
-alias weblio='python ~/.myscript/weblio.py'
+alias weblio='zsh $HOME/.myscript/weblio.sh'
 
 # tarとpigz
 function tpigz() {
