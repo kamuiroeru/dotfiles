@@ -23,3 +23,25 @@ export PATH=$HOME/.local/bin:$PATH
 
 # texvim with TexSync
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+
+# piping server
+
+link='link_you_want'
+
+function send()
+{
+	if test $# -eq 0; then
+		command curl -k -T - https://ppng.ml/$link
+	else
+		command curl -k -T $1 https://ppng.ml/$link
+	fi
+}
+
+function recv()
+{
+	if test $# -eq 0; then
+		command curl -k https://ppng.ml/$link
+	else
+		command curl -k https://ppng.ml/$link -o $1
+	fi
+}
