@@ -241,6 +241,8 @@ nnoremap <silent> <leader>t :split<cr><C-w>w:terminal<cr>
 " snippetのディレクトリ
 let g:neosnippet#snippets_directory = expand('~/.config/nvim/snippets')
 
+" texはすべてtexで読み込む（planetexになるのを回避）
+let g:tex_flavor = "latex"
 
 " 作業ディレクトリに .vimrcを置いてる場合、最後に読み込む
 if filereadable('.vimrc')
