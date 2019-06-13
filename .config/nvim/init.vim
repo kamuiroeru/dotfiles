@@ -244,8 +244,12 @@ let g:neosnippet#snippets_directory = expand('~/.config/nvim/snippets')
 " texはすべてtexで読み込む（planetexになるのを回避）
 let g:tex_flavor = "latex"
 
+" インデントを強制的にspace4に変更
+set expandtab
+set tabstop=4
+set shiftwidth=4
+
 " 作業ディレクトリに .vimrcを置いてる場合、最後に読み込む
 if filereadable('.vimrc')
     source .vimrc
 endif
-
