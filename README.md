@@ -9,6 +9,9 @@
 - gawk (無くても良いが、zplugでエラーが出る)
 - fzy（などのインタラクティブフィルタ）
 
+もしminicondaもインストールするなら、
+- bzip2
+
 
 #### How To Use
 1. `git clone https://github.com/kamuiroeru/dotfiles.git

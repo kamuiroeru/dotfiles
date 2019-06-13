@@ -15,7 +15,7 @@ ln -s dotfiles/.gitconfig .
 # miniconda install
 printf "Install miniconda (for Ubuntu)?(y/N): "
 if read -q; then
-    ./minicondaInstallUbuntu.sh
+    zsh dotfiles/minicondaInstallUbuntu.sh
 else
     echo "Skip!"
 fi
@@ -23,7 +23,7 @@ fi
 # neovim install
 printf "Install neovim (for Ubuntu)?(y/N): "
 if read -q; then
-    ./nvimInstallUbuntu.sh
+    zsh dotfiles/nvimInstallUbuntu.sh
 else
     echo "Skip!"
 fi
@@ -35,6 +35,7 @@ if read -q; then
 	mkdir ~/.config
     fi
     ln -s ../dotfiles/.config/nvim .config
+    echo ""
 else
     echo "Skip!"
 fi
@@ -43,6 +44,7 @@ fi
 printf "Install screen settings?(y/N): "
 if read -q; then
     ln -s dotfiles/.screenrc .
+    echo ""
 else
     echo "Skip!"
 fi
