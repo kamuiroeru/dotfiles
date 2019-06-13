@@ -12,6 +12,22 @@ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/instal
 
 ln -s dotfiles/.gitconfig .
 
+# miniconda install
+printf "Install miniconda (for Ubuntu)?(y/N): "
+if read -q; then
+    ./minicondaInstallUbuntu.sh
+else
+    echo "Skip!"
+fi
+
+# neovim install
+printf "Install neovim (for Ubuntu)?(y/N): "
+if read -q; then
+    ./nvimInstallUbuntu.sh
+else
+    echo "Skip!"
+fi
+
 # nvim
 printf "Install neovim settings?(y/N): "
 if read -q; then
