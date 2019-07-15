@@ -249,6 +249,9 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
+" Ambiguous Width double
+set ambiwidth=double
+
 " 作業ディレクトリに .vimrcを置いてる場合、最後に読み込む
 if filereadable('.vimrc')
     source .vimrc
