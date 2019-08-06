@@ -252,6 +252,20 @@ set shiftwidth=4
 " Ambiguous Width double
 set ambiwidth=double
 
+" jqコマンドがある場合、でjsonを整形できるようにする
+" https://qiita.com/tekkoc/items/324d736f68b0f27680b8
+if executable('jq')
+command! -nargs=? Jq call s:Jq(<f-args>)
+    function! s:Jq(...)
+        if 0 == a:0
+            let l:arg = "."
+        else
+            let l:arg = a:1
+        endif
+        execute "%! jq \"" . l:arg . "\""
+    endfunction
+endif
+
 " 作業ディレクトリに .vimrcを置いてる場合、最後に読み込む
 if filereadable('.vimrc')
     source .vimrc
