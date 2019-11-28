@@ -57,6 +57,12 @@ cd ~
 # myScript
 ln -s dotfiles/.myscript .
 
+# latexmk
+ln -s dotfiles/.latexmkrc .
+
+# tig
+ln -s dotfiles/.tigrc
+
 echo "Finish!!!"
 
 cp dotfiles/localfiles/.zshrc.local .

@@ -100,3 +100,6 @@
 	required = true
 [fetch]
 	prune = true
+[user]
+	name = Rei Okumura
+	email = me1802@s.akashi.ac.jp
