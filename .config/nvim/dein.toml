@@ -3,6 +3,19 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+    let g:deoplete#enable_at_startup = 1
+    call deoplete#custom#option({
+    \ 'auto_complete_delay': 0,
+    \ 'auto_complete_start_length': 1,
+    \ 'camel_case': 0,
+    \ 'ignore_case': 0,
+    \ 'refresh_always': 0,
+    \ 'smart_case': 1,
+    \ 'max_list': 1000,
+    \ })
+    call deoplete#custom#var('file', 'enable_buffer_path', 1)
+'''
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'

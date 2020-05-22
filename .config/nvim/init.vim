@@ -101,9 +101,6 @@ nnoremap <C-i> "i:QuickRun -outputter/buffer/split ":botright"<CR>"
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
 
-" 常に補完開始
-let g:deoplete#enable_at_startup = 1
-
 " tabキーで補完順が逆になるのを修復、jediで窓が出るのを阻止
 let g:SuperTabContextDefaultCompletionType = "context"
 let g:SuperTabDefaultCompletionType = "<c-n>"
@@ -142,7 +139,6 @@ endif
 "leader を spaceに
 let mapleader = "\<Space>"
 
-
 " スニペットの設定
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -180,18 +176,6 @@ function g:Multiple_cursors_after()
 	exe 'NeoCompleteUnlock'
     endif
 endfunction
-
-
-" deopleteの設定
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_delay = 0
-let g:deoplete#auto_complete_start_length = 1
-let g:deoplete#enable_camel_case = 0
-let g:deoplete#enable_ignore_case = 0
-let g:deoplete#enable_refresh_always = 0
-let g:deoplete#enable_smart_case = 1
-let g:deoplete#file#enable_buffer_path = 1
-let g:deoplete#max_list = 10000
 
 
 " 範囲拡大
