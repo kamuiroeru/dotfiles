@@ -61,7 +61,10 @@ ln -s dotfiles/.myscript .
 ln -s dotfiles/.latexmkrc .
 
 # tig
-ln -s dotfiles/.tigrc
+ln -s dotfiles/.tigrc .
+
+# notify
+ln -s dotfiles/notify.py .
 
 echo "Finish!!!"
 
