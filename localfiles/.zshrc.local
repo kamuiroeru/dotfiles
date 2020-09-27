@@ -4,7 +4,7 @@ PROMPT="%{${fg[black]}${bg[white]}%}[%n] %D %*>%{${reset_color}%} %~
 # LLVM: nvimのC/C++補完で必要
 export LLVM_ROOT=/usr/local/Cellar/llvm/6.0.0
 
-# slackbot の Incoming webhook の URL を設定。 notify.py で使用
+# slackbot の Incoming webhook の URL を設定。 .notify.sh で使用
 export SLACK_BOT_INCOMING_WEBHOOK=
 
 # condaのpath
