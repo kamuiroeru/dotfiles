@@ -64,7 +64,7 @@ ln -s dotfiles/.latexmkrc .
 ln -s dotfiles/.tigrc .
 
 # notify
-ln -s dotfiles/notify.py .
+ln -s dotfiles/.notify.sh .
 
 echo "Finish!!!"
 
