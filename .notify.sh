@@ -1,3 +1,4 @@
+#!/bin/bash
 
 webhook_url=$SLACK_BOT_INCOMING_WEBHOOK
 if [ -z $webhook_url ]; then
