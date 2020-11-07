@@ -148,7 +148,7 @@ alias -s {gz,tgz,zip,lzh,bz2,tbz,Z,tar,arj,xz,7z,rar}=extract
 alias mecabN='mecab -d /usr/local/lib/mecab/dic/mecab-ipadic-neologd'
 
 # notify
-alias notify='python $HOME/notify.py'
+alias notify='$HOME/.notify.sh'
 
 alias ca='conda activate'
 alias cda='conda deactivate'
