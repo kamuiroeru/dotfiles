@@ -1,4 +1,4 @@
-PROMPT="%{${fg[black]}${bg[white]}%}[%n] %D %*>%{${reset_color}%} %~
+PROMPT="%{${fg[black]}${bg[white]}%}[%n@%m] %D %*>%{${reset_color}%} %~
 %# "
 
 # LLVM: nvimのC/C++補完で必要
