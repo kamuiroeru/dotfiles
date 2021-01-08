@@ -6,14 +6,20 @@ if [ -z $webhook_url ]; then
 fi
 
 text="作業が終わりました。"
-if [ $# == 1 ]; then
-    text=$1
+if [ $# -ge 1 ]; then
+    text="$(IFS=' '; echo $*)"
 fi
+
+echo $#
+echo $text
 
 curl \
     -s \
     -o /dev/null \
     -X POST \
     -H 'Content-type: application/json' \
-    --data '{"text":"'$text'"}' \
-    $webhook_url
+    --data @- \
+    $webhook_url << EOS
+{"text": "$text"}
+EOS
+
