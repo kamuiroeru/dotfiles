@@ -34,17 +34,17 @@ link='link_you_want'
 function send()
 {
 	if test $# -eq 0; then
-		command curl -k -T - https://ppng.ml/$link
+		command curl -k -T - https://ppng.io/$link
 	else
-		command curl -k -T $1 https://ppng.ml/$link
+		command curl -k -T $1 https://ppng.io/$link
 	fi
 }
 
 function recv()
 {
 	if test $# -eq 0; then
-		command curl -k https://ppng.ml/$link
+		command curl -k https://ppng.io/$link
 	else
-		command curl -k https://ppng.ml/$link -o $1
+		command curl -k https://ppng.io/$link -o $1
 	fi
 }
