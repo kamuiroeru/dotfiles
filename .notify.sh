@@ -13,7 +13,8 @@ if [ $# -ge 1 ]; then
 fi
 
 # _ADD_TIMEが指定されていれば、時刻を前に追加する
-if [ -v _ADD_TIME ]; then
+# _ADD_TIMEの定義未定義を検査 https://qiita.com/ymdymd/items/51bf4145ec58654eaffc
+if [ "${_ADD_TIME+foo}" ]; then
     text=$(date "+%Y/%m/%d %H:%M:%S.%3N")"  ${text}"
 fi
 
