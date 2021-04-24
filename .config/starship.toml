@@ -1,0 +1,14 @@
+# 全体の設定
+
+add_newline = false
+
+[time]
+disabled = false
+style = "green"
+utc_time_offset = "+9"
+
+[username]
+style_user = "green"
+format = '[\[$user\]]($style) '
+show_always = true
+

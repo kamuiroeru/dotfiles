@@ -66,6 +66,9 @@ ln -s dotfiles/.tigrc .
 # notify
 ln -s dotfiles/.notify.sh .
 
+# starship
+ln -s ../dotfiles/.config/starship.toml .config
+
 echo "Finish!!!"
 
 cp dotfiles/localfiles/.zshrc.local .
