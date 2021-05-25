@@ -175,3 +175,7 @@ alias color='for c in {000..255}; do echo -n "\e[38;5;${c}m $c" ; [ $(($c%16)) -
 
 # docker系
 alias fig='docker-compose'
+
+# Subversion系
+alias svn-up-im='echo "called \"svn update --set-depth=immediates\""; svn update --set-depth=immediates'
+alias svn-up-inf='echo "called \"svn update --set-depth=inrinity\""; svn update --set-depth=infinity'
