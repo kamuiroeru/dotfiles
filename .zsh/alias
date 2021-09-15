@@ -178,4 +178,4 @@ alias fig='docker-compose'
 
 # Subversion系
 alias svn-up-im='echo "called \"svn update --set-depth=immediates\""; svn update --set-depth=immediates'
-alias svn-up-inf='echo "called \"svn update --set-depth=inrinity\""; svn update --set-depth=infinity'
+alias svn-up-inf='echo "called \"svn update --set-depth=infinity\""; svn update --set-depth=infinity'
