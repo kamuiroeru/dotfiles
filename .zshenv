@@ -1,2 +1,6 @@
 ZDOTDIR=$HOME/.zsh
-. "$HOME/.cargo/env"
+
+# cargo の設定
+if [ -e "$HOME/.cargo/env" ]; then
+    . "$HOME/.cargo/env"
+fi
