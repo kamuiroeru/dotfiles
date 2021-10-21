@@ -20,6 +20,10 @@ $pdf_previewer = 'open -ga /Applications/Skim.app';
 # ディレクトリ指定
 $out_dir = 'build';
 
+# bibtex のビルドエラーを回避
+$bibtex_fudge=1;
+
+
 # vimtexのコールバックでうまく動かなかったので、泥臭く解決
 # タイプセットがうまくいったときだけ、cpコマンドを打つ
 # $success_cmd = 'nvr --remote-expr "vimtex#compiler#callback(1)"; cp -f %D ..';
