@@ -2,12 +2,12 @@
 
 # GitHub から 公開鍵をダウンロードして、配置する
 
+GITHUB_USERNAME=$1
 if [ $# -eq 0 ]; then
-    echo "Usage: $0 \"GithubUsername\""
-    exit 1
+    # 引数に無い場合は 入力させる
+    read -p "GitHubUsername: " GITHUB_USERNAME
 fi
 
-GITHUB_USERNAME=$1
 GITHUB_PUBKEY_URL="https://github.com/${GITHUB_USERNAME}.keys"
 
 # Github User が存在するかチェック
