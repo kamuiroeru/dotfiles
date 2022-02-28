@@ -32,7 +32,7 @@ fi
 printf "Install neovim settings?(y/N): "
 if read -q; then
     if [ ! -d "$~/.config" ]; then
-	mkdir ~/.config
+	mkdir -p ~/.config
     fi
     ln -s ../dotfiles/.config/nvim .config
     echo ""
