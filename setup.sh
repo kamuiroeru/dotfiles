@@ -35,6 +35,7 @@ if read -q; then
 	mkdir -p ~/.config
     fi
     ln -s ../dotfiles/.config/nvim .config
+    ln -s ../dotfiles/.config/git .config
     echo ""
 else
     echo "Skip!"
