@@ -48,3 +48,8 @@ function recv()
 		command curl -k https://ppng.io/$link -o $1
 	fi
 }
+
+# Poetry
+# curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+export PATH=$HOME/.poetry/bin:$PATH
+alias pos="poetry shell"
