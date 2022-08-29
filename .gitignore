@@ -1,2 +1,4 @@
 .zcompdump
 .DS_Store
+
+.zsh_sessions
