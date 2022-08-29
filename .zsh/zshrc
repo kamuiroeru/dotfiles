@@ -36,6 +36,9 @@ zstyle ':zle:*' word-style unspecified
 
 ########################################
 # 補完
+# 拡張を追加
+fpath+=~/.zfunc
+
 # 補完機能を有効にする
 autoload -Uz compinit
 compinit

@@ -6,6 +6,9 @@ ln -s dotfiles/.zsh .
 # zplug
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
 
+# 拡張用ディレクトリを作成
+mkdir -p ~/.zfunc
+
 # vimはやめた
 # ln -s dotfiles/.vimrc .
 # ln -s dotfiles/.vim .
