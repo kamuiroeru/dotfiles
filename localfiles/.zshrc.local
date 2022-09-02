@@ -51,5 +51,7 @@ function recv()
 
 # Poetry
 # curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+# poetry config virtualenvs.in-project true
+# poetry completions zsh > ~/.zfunc/_poetry
 export PATH=$HOME/.poetry/bin:$PATH
 alias pos="poetry shell"
