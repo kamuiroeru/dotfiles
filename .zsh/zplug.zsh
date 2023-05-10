@@ -9,6 +9,12 @@ zplug "zsh-users/zsh-history-substring-search", defer:2, \
 	bindkey '^[[B' history-substring-search-down
 	"""
 
+# SSH ログインしているときでも矢印キーを動作させるための workaround
+if [ -n "$SSH_CONNECTION" ]; then
+    bindkey '\eOA' history-substring-search-up
+    bindkey '\eOB' history-substring-search-down
+fi
+
 # enhance cd
 zplug "b4b4r07/enhancd", use:init.sh
 
