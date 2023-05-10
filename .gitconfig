@@ -80,6 +80,7 @@
 	pullall = !git pull && git submodule update --init --recursive
 	graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
     vacuum = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|main|master'|xargs git branch -d; };f"
+    si = "switch"
 
 [merge]
 	tool = nvim
