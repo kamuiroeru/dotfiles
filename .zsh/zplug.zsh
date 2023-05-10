@@ -15,16 +15,16 @@ zplug "b4b4r07/enhancd", use:init.sh
 # gitでの^エスケープ
 zplug "kamuiroeru/zsh-git-escape-magic"
 
-# Emoji
-zplug "stedolan/jq", \
-    from:gh-r, \
-    as:command, \
-    rename-to:jq
-zplug "b4b4r07/emoji-cli", \
-    on:"stedolan/jq"
-
-
+# # Emoji
+# zplug "stedolan/jq", \
+#     from:gh-r, \
+#     as:command, \
+#     rename-to:jq
+# zplug "b4b4r07/emoji-cli", \
+#     on:"stedolan/jq"
+#
+#
 zplug "chrissicool/zsh-256color"
-
-zplug "mollifier/cd-gitroot"
-alias cdu='cd-gitroot'
+#
+# zplug "mollifier/cd-gitroot"
+# alias cdu='cd-gitroot'
