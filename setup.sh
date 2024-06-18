@@ -53,6 +53,10 @@ else
     echo "Skip!"
 fi
 
+# Misc config
+ln -s ../dotfiles/.config/husky .config
+
+
 # git pull
 cd dotfiles
 git submodule update -i
