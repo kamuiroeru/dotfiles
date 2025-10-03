@@ -25,7 +25,9 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
 # texvim with TexSync
-export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+# neovim v0.11 より、これを設定すると複数起動できなくなったため、コメントアウト
+# FYI: https://github.com/neovim/neovim/issues/33150
+# export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 
 # piping server
 
