@@ -1,7 +1,7 @@
 # 補完、syntax highlight 履歴系
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
-: ${ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=015'}
+: ${ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#555555'}
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:2, \
     hook-load: """
